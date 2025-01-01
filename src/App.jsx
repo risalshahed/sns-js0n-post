@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from './components/Header';
 import Blog from './pages/Blog';
@@ -8,8 +9,10 @@ function App() {
   return (
     <BlogsProvider>
       <Header />
-      <Home />
-      <Blog />
+      <Routes>
+        <Route path='/' Component={Home} />
+        <Route path='/blog/:id' Component={Blog} />
+      </Routes>
     </BlogsProvider>
   )
 }

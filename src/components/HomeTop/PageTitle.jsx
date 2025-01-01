@@ -1,9 +1,7 @@
-import React from 'react';
-
 const PageTitle = () => {
   return (
     <h1>
-      Placeholder Posts
+      Dev to Articles
     </h1>
   );
 }

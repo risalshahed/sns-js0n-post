@@ -10,7 +10,7 @@ const useFetchBlogs = () => {
     const getBlogs = async () => {
       setLoading(true);
       const { data, error } = await fetchBlogs();
-      
+
       if (error) {
         setError(error);
       } else {

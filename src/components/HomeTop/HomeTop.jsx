@@ -1,9 +1,12 @@
 import React from 'react';
+import PageTitle from './PageTitle';
+import Search from './Search';
 
 const HomeTop = () => {
   return (
-    <div>
-      Home Top
+    <div className='home-top'>
+      <PageTitle />
+      <Search />
     </div>
   );
 }

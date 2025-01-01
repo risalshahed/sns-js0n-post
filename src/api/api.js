@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = 'https://jsonplaceholder.typicode.com/posts';
+const baseUrl = 'https://dev.to/api/articles';
 
 export const fetchBlogs = async () => {
   try {

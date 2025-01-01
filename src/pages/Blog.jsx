@@ -1,8 +1,8 @@
+import BlogDetails from "../components/BlogDetails/BlogDetails";
+
 const Blog = () => {
   return (
-    <div>
-      Dynamic Single Blog page
-    </div>
+      <BlogDetails />
   );
 }
 

@@ -1,13 +1,12 @@
-import React from 'react';
 import SearchIcon from '../SVGs/SearchIcon';
 
 const Search = () => {
   return (
-    <div className='search-field'>
-      <p>
-        Search ...
-      </p>
-      <SearchIcon />
+    <div className='search'>
+      <input className='search-input' placeholder='Search ...' />
+      <div className='search-icon'>
+        <SearchIcon />
+      </div>
     </div>
   );
 }
