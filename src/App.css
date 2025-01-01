@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header's style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menus {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+}
+.menus > div {
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+.menus > div:first-child {
+  background-color: #d9d9d920;
+  display: flex;
+  align-items: center;
+}
+.menus > div:not(:first-child) {
+  border: none;
+}
+#bell-count {
+  position: relative;
+}
+.menus sup {
+  position: absolute;
+  font-size: 24px;
+  top: -5px;
+}
+#sign-in {
+  background-color: #e3e3e3;
+  border: 1px solid #767676;
+}
+#register {
+  color: #f5f5f5;
+  background-color: #2c2c2c;
+  border: 1px solid #2c2c2c;
+}
+
+/* Search Field */
+.search-field {
+  background-color: #f0f1f5;
+}
