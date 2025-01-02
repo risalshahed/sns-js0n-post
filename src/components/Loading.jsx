@@ -1,8 +1,8 @@
 const Loading = () => {
   return (
-    <div>
+    <h1>
       Fetching More Blogs ...
-    </div>
+    </h1>
   );
 }
 

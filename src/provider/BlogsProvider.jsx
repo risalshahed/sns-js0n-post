@@ -2,10 +2,10 @@ import { BlogsContext } from "../context";
 import useFetchBlogs from "../hooks/useFetchBlogs";
 
 const BlogsProvider = ({ children }) => {
-  const { blogs, loading, error } = useFetchBlogs();
+  const { loading, error, loadMoreBlogs, filteredBlogs, searchQuery, setSearchQuery } = useFetchBlogs();
 
   return (
-    <BlogsContext.Provider value={{ blogs, loading, error }}>
+    <BlogsContext.Provider value={{ loading, error, loadMoreBlogs, filteredBlogs, searchQuery, setSearchQuery }}>
       { children }
     </BlogsContext.Provider>
   );

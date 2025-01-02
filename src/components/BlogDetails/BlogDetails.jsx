@@ -27,8 +27,6 @@ const BlogDetails = () => {
 
   const formattedDate = formatDate(blog?.created_at);
 
-  console.log(blog);
-
   return (
     <div className='blog-details-top'>
       <div className='blog-details'>
@@ -74,7 +72,7 @@ const BlogDetails = () => {
                 </p>
 
                 <h6>{tag}</h6>
-                <p>Review body</p>
+                <p>{blog?.description}</p>
                 <div className='review-user'>
                   <img src={blog?.user.profile_image} alt={blog?.user.name} />
                   <div>
