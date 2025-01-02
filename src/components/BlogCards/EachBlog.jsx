@@ -5,9 +5,9 @@ import Calendar from "../SVGs/Calendar";
 
 const EachBlog = ({ blog }) => {
   const { id, cover_image, social_image, created_at, title, description, user } = blog;
-
+  // Format Date
   const formattedDate = formatDate(created_at);
-
+  // Truncate Description
   const truncatedText = truncateDescription(description);
 
   return (
@@ -15,9 +15,6 @@ const EachBlog = ({ blog }) => {
       <div>
         <img className='each-blog-img' src={cover_image} alt={title} />
       </div>
-      {/* <p>
-        {Math.ceil(comments_count / 8)}
-      </p> */}
       <div className='date-user'>
         <p>
           <div>

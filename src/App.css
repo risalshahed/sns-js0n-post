@@ -3,15 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* html, body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-} */
+}
 body {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3%;
+  padding: 0 3% 64px;
 }
 h1 {
   font-size: 48px;
@@ -84,7 +84,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 64px 0;
 }
 
 /* Search Field */
@@ -92,20 +92,20 @@ header {
   position: relative;
 }
 .search-input {
+  width: 576px;
   font-size: 24px;
   background-color: #f0f1f5;
   border: none;
   outline: none;
   border-radius: 10px;
-  padding: 24px;
-  width: 700px;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .search-icon {
   position: absolute;
-  top: 18px;
+  top: 12px;
   right: 16px;
 }
 
@@ -117,6 +117,7 @@ header {
 }
 .each-blog {
   background-color: #f7f9f9;
+  padding-bottom: 18px;
 }
 .each-blog > h2, .each-blog > p, .each-blog > div:not(:first-child) {
   padding: 16px 24px 0;
@@ -135,10 +136,15 @@ header {
   align-items: center;
   column-gap: 5px;
 }
+.date-user > p:last-child {
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
 
 /* Blog Details */
 .blog-details-top {
-  padding: 40px 0;
+  padding: 64px 0;
 }
 .blog-details {
   display: flex;
@@ -173,7 +179,7 @@ header {
 }
 /* Reviews */
 .blog-details-top {
-  padding: 40px 0;
+  padding: 64px 0;
 }
 .blog-details-top > h4 {
   padding: 16px 0;
@@ -235,6 +241,18 @@ header {
                       RESPONSIVE DESIGN
 ------------------------------------------------------------- */
 @media(max-width: 992px) {
+  .home-top {
+    flex-direction: column;
+  }
+  /* Search */
+  .search {
+    margin-top: 24px;
+  }
+  /* Blog Cards */
+  .date-user {
+    flex-direction: column-reverse;
+    row-gap: 12px;
+  }
   /* Blog Details */
   .blog-details {
     flex-direction: column;
@@ -248,6 +266,21 @@ header {
   }
 }
 @media(max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  /* Search */
+  .search-input {
+    width: 480px;
+  }
+  /* Blog Cards */
+  .blog-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .each-blog > h2, .each-blog > p {
+    text-align: center;
+  }
+  /* Reviews */
   .reviews {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -262,7 +295,26 @@ header {
   }
 }
 @media(max-width: 576px) {
+  body {
+    padding: 2%;
+  }
+  /* Header */
+  .menus {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+  }
+  /* Search Input */
+  .search-input {
+    width: 320px;
+  }
+  /* Reviews */
   .reviews {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media(max-width: 360px) {
+  .search-input {
+    width: 100%;
   }
 }
