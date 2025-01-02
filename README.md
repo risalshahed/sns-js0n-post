@@ -1,6 +1,6 @@
 # Dev to Articles
 
-## [Live Application]()
+## [Live Application](https://sns-js0n-post.vercel.app)
 
 - Clone the Github repository
 ```
@@ -9,7 +9,7 @@ git clone https://github.com/risalshahed/sns-js0n-post.git
 
 - Go inside the project directory
 ```
-cd sns-js0n-post.git
+cd sns-js0n-post
 ```
 
 - Install the dependencies
