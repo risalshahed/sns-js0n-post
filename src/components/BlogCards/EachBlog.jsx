@@ -4,7 +4,7 @@ import { truncateDescription } from "../../utils/truncateDescription";
 import Calendar from "../SVGs/Calendar";
 
 const EachBlog = ({ blog }) => {
-  const { cover_image, social_image, created_at, title, description, user } = blog;
+  const { id, cover_image, social_image, created_at, title, description, user } = blog;
 
   const formattedDate = formatDate(created_at);
 
@@ -35,7 +35,7 @@ const EachBlog = ({ blog }) => {
         {title}
       </h2>
       <p>
-        {truncatedText} <Link>Read More</Link>
+        {truncatedText} <Link to={`/blog/${id}`}>Read More</Link>
       </p>
     </div>
   );

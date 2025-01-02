@@ -3,16 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+} */
 body {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 3%;
 }
-
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 44px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 36px;
+}
+h5 {
+  font-size: 32px;
+}
+h6 {
+  font-size: 28px;
+}
 p {
   font-size: 24px;
 }
-
 button {
   cursor: pointer;
 }
@@ -113,4 +134,135 @@ header {
   display: flex;
   align-items: center;
   column-gap: 5px;
+}
+
+/* Blog Details */
+.blog-details-top {
+  padding: 40px 0;
+}
+.blog-details {
+  display: flex;
+  column-gap: 5%;
+  align-items: center;
+}
+.blog-details > div {
+  width: 50%;
+}
+.blog-details-img {
+  width: 100%;
+}
+.detail-title, .detail-date {
+  display: flex;
+  align-items: center;
+}
+.detail-title {
+  justify-content: space-between;
+}
+.detail-title h4, .detail-title > div, .detail-title ~ p {
+  padding: 12px 0;
+}
+.detail-date {
+  column-gap: 8px;
+}
+.detail-title button {
+  background-color: #c9c5c550;
+  border-radius: 10px;
+  width: 128px;
+  padding: 8px;
+  border: none;
+}
+/* Reviews */
+.blog-details-top {
+  padding: 40px 0;
+}
+.blog-details-top > h4 {
+  padding: 16px 0;
+}
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
+  gap: 16px;
+}
+.each-review {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 16px 24px;
+  width: 100%;
+}
+.each-review h6 {
+  text-transform: capitalize;
+}
+.each-review img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.each-review > h6, .each-review > div, .each-review > p {
+  padding: 8px 0 0;
+}
+.review-user {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 8px;
+}
+/* Subscription */
+.subscription {
+  max-width: 768px;
+  margin: auto;
+  text-align: center;
+}
+.subscription > div {
+  padding: 16px 0;
+}
+.subscription p {
+  padding-top: 8px;
+}
+.subscription input, button {
+  padding: 12px;
+  outline: none;
+  border-radius: 8px;
+}
+.subscription button {
+  color: #f5f5f5;
+  background-color: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  margin-left: 8px;
+}
+
+/* -------------------------------------------------------------
+                      RESPONSIVE DESIGN
+------------------------------------------------------------- */
+@media(max-width: 992px) {
+  /* Blog Details */
+  .blog-details {
+    flex-direction: column;
+  }
+  .blog-details > div {
+    width: 100%;
+  }
+  /* Reviews */
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(max-width: 768px) {
+  .reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-title {
+    flex-direction: column-reverse;
+  }
+  .detail-title h4 {
+    padding-top: 0;
+  }
+  .detail-title > div:last-child {
+    padding-bottom: 0;
+  }
+}
+@media(max-width: 576px) {
+  .reviews {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

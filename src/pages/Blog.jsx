@@ -2,7 +2,7 @@ import BlogDetails from "../components/BlogDetails/BlogDetails";
 
 const Blog = () => {
   return (
-      <BlogDetails />
+    <BlogDetails />
   );
 }
 

@@ -9,10 +9,12 @@ function App() {
   return (
     <BlogsProvider>
       <Header />
-      <Routes>
-        <Route path='/' Component={Home} />
-        <Route path='/blog/:id' Component={Blog} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' Component={Home} />
+          <Route path='/blog/:id' Component={Blog} />
+        </Routes>
+      </main>
     </BlogsProvider>
   )
 }
